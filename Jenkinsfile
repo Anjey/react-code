@@ -44,7 +44,7 @@ pipeline{
         stage('build infra'){
             steps{
                 script{
-                   if (branch == 'main') {
+                   if (env.BRANCH_NAME == 'main') {
               build job: "react-project-infra/main", parameters: [
                 string(name: 'BRANCH_PROD' , value: "main")
             ],
