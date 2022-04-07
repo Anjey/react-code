@@ -3,7 +3,6 @@ pipeline{
     
     stages{
     
-        stages{
         stage('Checkout') {
             steps {
                 deleteDir()
@@ -65,4 +64,4 @@ pipeline{
         
          
     }
-}   
+ 
