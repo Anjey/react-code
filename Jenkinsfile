@@ -46,7 +46,7 @@ pipeline{
                 script{
                    if (branch == 'main') {
               build job: "react-project-infra/main", parameters: [
-                string(name: 'BRANCH_PROD' , value: "${branch}")
+                string(name: 'BRANCH_PROD' , value: "main")
             ],
             wait:false
             }
