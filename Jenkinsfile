@@ -46,13 +46,13 @@ pipeline{
             steps{
                 script{
                    if (branch == 'main') {
-              build job: "react-project-infra", parameters: [
+              build job: "react-project-infra/main", parameters: [
                 string(name: 'BRANCH_PROD' , value: "${branch}")
             ],
             wait:false
             }
             else {
-              build job: "react-project-infra", parameters: [
+              build job: "react-project-infra/dev", parameters: [
                 string(name: 'BRANCH_DEV' , value: "dev")
             ],
             wait:false
@@ -64,4 +64,5 @@ pipeline{
         }
         
          
-}
+    }
+}   
