@@ -23,20 +23,20 @@ import './App.css';
 import { useFetch } from "react-async"
 
 // To be replaced by the endpoint of the API deployed through the CloudFormation Template
-const APIEndPoint = 'to be replaced with your api endpoint here'
+const APIEndPoint = 'react-project-alb-lb-288763873.us-east-2.elb.amazonaws.com/api'
 
 function App() {
   return (
     <div className="App">
-        <header className="App-header">
-            <APIResult />
-            <img src={logo} className="App-MainLogo" alt="logo" />
-        </header>
-        <p>This react-based application is hosted in an S3 bucket exposed through a CloudFront distribution</p>
-        <div className="logos">
-            <img src={logoS3} className="App-logoR2L" alt="logo S3" />
-            <img src={logoCF} className="App-logoL2R" alt="logo CloudFront" />
-        </div>
+      <header className="App-header">
+        <APIResult />
+        <img src={logo} className="App-MainLogo" alt="logo" />
+      </header>
+      <p>This react-based application is hosted in an S3 bucket exposed through a CloudFront distribution</p>
+      <div className="logos">
+        <img src={logoS3} className="App-logoR2L" alt="logo S3" />
+        <img src={logoCF} className="App-logoL2R" alt="logo CloudFront" />
+      </div>
     </div>
   );
 }
